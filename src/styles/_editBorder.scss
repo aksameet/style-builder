@@ -1,0 +1,50 @@
+.sb-editBorder {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px;
+  grid-template-columns: 64px 64px 64px 64px;
+
+  > .sb-colorpicker {
+    @extend %colorpicker;
+  }
+
+  > .sb-style {
+    @extend %dropdown-standalone;
+    width: 64px;
+  }
+
+  > .sb-width {
+    @extend %spinner-standalone;
+  }
+
+  > .sb-radiusMode {
+    grid-area: 4 / span 4;
+
+    & > .sb-legend {
+      @extend .sb-label;
+    }
+
+    & > .sb-content {
+      display: flex;
+    }
+
+    .sb-button {
+      @extend %button;
+      margin-right: 2px;
+    }
+  }
+
+  > .sb-borderTopLeftRadius,
+  > .sb-borderTopRightRadius,
+  > .sb-borderBottomRightRadius,
+  > .sb-borderBottomLeftRadius {
+    display: grid;
+    grid-gap: 10px;
+
+    > .sb-horizontal,
+    > .sb-vertical {
+      @extend %spinner-standalone;
+    }
+  }
+}

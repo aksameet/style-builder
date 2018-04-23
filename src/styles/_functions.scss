@@ -1,0 +1,23 @@
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@function icon-url($iconName, $fillColor: '#000', $width:16, $height:16) {
+  $mediaType: "data:image/svg+xml";
+
+  $dimensions: "width='" + $width + "' height='" + $height + "'";
+  $viewbox: "viewBox='0 0 16 16'";
+
+  $fillColorProp: "fill='" + str-replace(quote($fillColor), '#', '%23') + "'";
+  $svgOpening: "%3Csvg xmlns='http://www.w3.org/2000/svg' " + $dimensions + ' ' + $viewbox + "%3E";
+  $svgClosing: "%3C/svg%3E";
+  $pathTag: "%3Cpath " + $fillColorProp + " d='" + map-get($icons, $iconName) + "'/%3E";
+
+  @return url($mediaType + "," + $svgOpening + $pathTag + $svgClosing);
+}

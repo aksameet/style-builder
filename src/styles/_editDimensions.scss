@@ -1,0 +1,36 @@
+.sb-editDimensions {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px 24px;
+  grid-template-columns: 36px 64px 64px 64px 36px;
+  grid-template-rows: 43px 43px;
+
+  .sb-width,
+  .sb-minWidth,
+  .sb-maxWidth,
+  .sb-height,
+  .sb-minHeight,
+  .sb-maxHeight {
+    @extend %spinner-standalone;
+  }
+
+  .sb-minWidth {
+    grid-area: 1/2;
+  }
+  .sb-width {
+    grid-area: 1/3;
+  }
+  .sb-maxWidth {
+    grid-area: 1/4;
+  }
+  .sb-minHeight {
+    grid-area: 2/2;
+  }
+  .sb-height {
+    grid-area: 2/3;
+  }
+  .sb-maxHeight {
+    grid-area: 2/4;
+  }
+}

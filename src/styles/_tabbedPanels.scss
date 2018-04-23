@@ -1,0 +1,70 @@
+.sb-actions {
+  $enabled-color: #aaa;
+  $disabled-color: #777;
+  $hover-color: #eee;
+
+  & > .sb-tabs {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    user-select: none;
+
+    & > .sb-style,
+    & > .sb-transport,
+    & > .sb-navigate {
+      box-sizing: border-box;
+      width: 122px;
+      margin: 2px;
+      color: $enabled-color;
+      text-align: center;
+      padding: 10px 10px 10px 40px;
+      border: 1px solid $enabled-color;
+      cursor: pointer;
+
+      &:hover,
+      &.sb-active {
+        color: $hover-color;
+        border-color: $hover-color;
+      }
+
+      &.sb-active {
+        pointer-events: none;
+        background-color: #777;
+      }
+
+      &.sb-disabled {
+        pointer-events: none;
+        color: $disabled-color;
+        border-color: $disabled-color;
+        background-image: icon-url('blocked', $disabled-color);
+      }
+    }
+
+    & > .sb-style {
+      background: transparent icon-url('brush', $enabled-color) no-repeat left 10px center / 20px;
+
+      &:hover,
+      &.sb-active {
+        background-image: icon-url('brush', $hover-color);
+      }
+    }
+
+    & > .sb-navigate {
+      background: transparent icon-url('tree7', $enabled-color) no-repeat left 10px center / 20px;
+
+      &:hover,
+      &.sb-active {
+        background-image: icon-url('tree7', $hover-color);
+      }
+    }
+
+    & > .sb-transport {
+      background: transparent icon-url('transmission2', $enabled-color) no-repeat left 10px center / 20px;
+
+      &:hover,
+      &.sb-active {
+        background-image: icon-url('transmission2', $hover-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.sb-transport {
+  padding: 10px;
+
+  & > .sb-controls {
+    display: flex;
+    margin-bottom: 10px;
+
+    & > .sb-import,
+    & > .sb-export {
+      @extend %button;
+      width: 115px;
+      margin: 0 10px 0 0;
+    }
+  }
+
+  & > .sb-data {
+    display: block;
+    width: 240px;
+    height: 300px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}

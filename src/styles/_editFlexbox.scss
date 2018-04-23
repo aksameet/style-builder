@@ -1,0 +1,24 @@
+.sb-editFlexbox {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px;
+  grid-template-columns: 110px 110px 110px;
+
+  > .sb-order,
+  > .sb-grow,
+  > .sb-shrink,
+  > .sb-basis {
+    @extend %spinner-standalone;
+  }
+
+  > .sb-direction,
+  > .sb-wrap,
+  > .sb-alignItems,
+  > .sb-alignContent,
+  > .sb-justifyContent,
+  > .sb-alignSelf {
+    @extend %dropdown-standalone;
+    width: 110px;
+  }
+}

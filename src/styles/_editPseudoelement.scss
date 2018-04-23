@@ -1,0 +1,27 @@
+.sb-editPseudoelement {
+  margin-top: 6px;
+
+  & > .sb-options {
+    & > .sb-legend {
+      @extend .sb-label;
+    }
+
+    & > .sb-content {
+      display: flex;
+    }
+
+    .sb-button {
+      @extend %button;
+      margin-right: 2px;
+    }
+  }
+
+  & > .sb-content {
+    @extend %textfield;
+    margin-top: 6px;
+
+    & > .sb-label {
+      display: block;
+    }
+  }
+}

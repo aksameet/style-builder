@@ -1,0 +1,63 @@
+@import 'reset';
+@import 'functions';
+@import 'icons';
+@import 'general';
+@import 'primitives';
+
+@import 'editables';
+@import 'toolbox';
+
+@import 'spinner';
+@import 'textfield';
+@import 'dropdown';
+@import 'panel';
+@import 'treeview';
+@import 'colorpicker';
+@import 'tabbedPanels';
+@import 'contextEdit';
+@import 'common';
+@import 'transport';
+@import 'editDevice';
+@import 'editPseudoclass';
+@import 'editPseudoelement';
+@import 'editFlexbox';
+@import 'editPosition';
+@import 'editFont';
+@import 'editList';
+@import 'editBorder';
+@import 'editBackground';
+@import 'editBoxShadow';
+@import 'editTextShadow';
+@import 'editDimensions';
+@import 'editLayout';
+@import 'editMiscellaneous';
+@import 'blockDimensions';
+
+
+:focus {
+  outline: none;
+}
+
+.sb-styleControls {
+  & > .sb-tabs {
+    display: flex;
+    margin-bottom: 8px;
+
+    & > .sb-tab {
+      margin: 1px;
+      padding: 4px 8px;
+      color: #fff;
+      background: #767776;
+      border-radius: 3px;
+    }
+  }
+}
+
+.transport {
+  & > .data {
+    position: absolute;
+    top: 30px;
+    width: 300px;
+    height: 400px;
+  }
+}

@@ -1,0 +1,15 @@
+.sb-pseudoclass {
+
+  & > .sb-legend {
+    @extend .sb-label;
+  }
+
+  & > .sb-content {
+    display: flex;
+  }
+
+  .sb-button {
+    @extend %button;
+    margin-right: 2px;
+  }
+}

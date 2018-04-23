@@ -1,0 +1,43 @@
+.contextEdit {
+  grid-area: 2;
+  
+  > .manager {
+    > .popper {
+      z-index: 100;
+
+      > .dialog {
+        min-width: 200px;
+        padding-bottom: 1px;
+        border: 1px solid #3b79c3;
+        border-radius: 3px;
+        background: #3b79c3;
+
+        > .header,
+        > .body {
+          padding: 2px 4px;
+          line-height: 1.2;
+        }
+
+        > .header {
+          color: #eee;
+          font-size: 11px;
+        }
+
+        > .body {
+          box-sizing: border-box;
+          width: 100%;
+          margin: 0;
+          font-size: 12px;
+          border: none;
+          background: #fff;
+        }
+      }
+    }
+
+    > .target {
+      > .sb-edit {
+        @extend %button;
+      }
+    }
+  }
+}

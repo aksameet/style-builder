@@ -1,0 +1,83 @@
+$element-height: 18px;
+
+%blockDimensions {
+  $background-color: #626262;
+  $offset: 6px;
+  $margin: 4px;
+  $thickness: 10px;
+
+  & > .sb-top,
+  & > .sb-right,
+  & > .sb-bottom,
+  & > .sb-left {
+    display: flex;
+    position: absolute;
+    background-repeat: no-repeat;
+
+    & > .sb-spinner {
+      @extend %spinner-standalone;
+
+      & > .sb-label {
+        display: none;
+      }
+
+      .sb-mode {
+        & > .sb-label {
+          display: none;
+        }
+      }
+
+      & > .sb-value {
+        & > .sb-label {
+          display: none;
+        }
+      }
+    }
+  }
+
+  & > .sb-top,
+  & > .sb-bottom {
+    left: $margin;
+    right: $margin;
+    flex-direction: row;
+    justify-content: center;
+    height: $thickness;
+    background-size: 50% 100%;
+    background-position: left, right;
+  }
+
+  & > .sb-left,
+  & > .sb-right {
+    top: $margin;
+    bottom: $margin;
+    flex-direction: column;
+    justify-content: center;
+    width: $thickness;
+    background-size: 100% 50%;
+    background-position: top, bottom;
+  }
+
+  & > .sb-top {
+    top: 0;
+    background-image: linear-gradient(45deg, transparent $offset, $background-color 0),
+    linear-gradient(315deg, transparent $offset, $background-color 0);
+  }
+
+  & > .sb-right {
+    right: 0;
+    background-image: linear-gradient(135deg, transparent $offset, $background-color 0),
+    linear-gradient(45deg, transparent $offset, $background-color 0);
+  }
+
+  & > .sb-bottom {
+    bottom: 0;
+    background-image: linear-gradient(135deg, transparent $offset, $background-color 0),
+    linear-gradient(225deg, transparent $offset, $background-color 0);
+  }
+
+  & > .sb-left {
+    left: 0;
+    background-image: linear-gradient(225deg, transparent $offset, $background-color 0),
+    linear-gradient(315deg, transparent $offset, $background-color 0);
+  }
+}

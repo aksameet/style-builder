@@ -1,0 +1,28 @@
+.sb-editList {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px;
+  grid-template-columns: 100px 64px auto;
+
+  & > .sb-image {
+    @extend %textfield;
+    grid-area: 1/ span 3;
+    width: 100%;
+  }
+
+  & > .sb-type,
+  & > .sb-position {
+    @extend %dropdown-standalone;
+  }
+
+  & > .sb-type {
+    grid-area: 2/1;
+    width: 100px;
+  }
+
+  & > .sb-position {
+    grid-area: 2/2;
+    width: 64px;
+  }
+}

@@ -1,0 +1,46 @@
+%textfield {
+  $clear-size: 13px;
+
+  & > .sb-controls {
+    position: relative;
+
+    & > .sb-input {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0 $clear-size + 2px 0 3px;
+      border: none;
+      border-radius: 3px;
+      color: #333;
+      font-size: $control-font-size;
+      line-height: $control-line-height;
+      background-color: $control-bg-color;
+
+      &[disabled] {
+        height: 15px;
+        border: 1px dashed $control-border-color-disabled;
+        background: $control-bg-color-disabled icon-url('minus3', $control-border-color-disabled) no-repeat center center;
+      }
+    }
+
+    & > .sb-clear {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+      width: $clear-size;
+      height: $clear-size;
+      padding: 0;
+      border: none;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+      background: transparent icon-url('cancel-circle', '#666') no-repeat center center / 11px;
+
+      &:hover {
+        background-image: icon-url('cancel-circle2', '#666');
+      }
+    }
+  }
+}

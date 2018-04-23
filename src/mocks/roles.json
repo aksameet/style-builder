@@ -1,0 +1,176 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Fri Mar 10 2017 14:40:45 GMT+0000",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:mixinTypes": [],
+    "jcr:createdBy": "admin",
+    "jcr:title": "Open Template Example",
+    "cq:template": "/apps/opentemplate/templates/cloudconfiguration",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Fri Mar 10 2017 14:40:45 GMT+0000",
+    "cq:lastModified": "Tue Apr 04 2017 09:30:13 GMT+0200",
+    "jcr:lastModified": "Tue Apr 04 2017 09:30:13 GMT+0200",
+    "sling:resourceType": "opentemplate/components/pages/cloudservicepage",
+    "cq:lastModifiedBy": "admin",
+    "glossary": {
+      "jcr:primaryType": "sling:OrderedFolder",
+      "jcr:createdBy": "admin",
+      "jcr:created": "Tue May 16 2017 12:52:28 GMT+0000",
+      "sling:resourceType": "opentemplate/components/pages/glossaryConfig"
+    },
+    "pageStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "demo-page"
+      }
+    },
+    "textAndMediaStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "logo-roche"
+      },
+      "item_2": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "top-banner"
+      },
+      "item_3": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "middle-banner"
+      },
+      "item_4": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "indication"
+      },
+      "item_7": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "indication-text"
+      },
+      "item_6": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "main-text"
+      },
+      "item_8": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "footer-copywrite"
+      },
+      "item_5": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "footer-text"
+      },
+      "item_9": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "tescior"
+      }
+    },
+    "columnLayoutBlockStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "basic-columns"
+      }
+    },
+    "menuStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "top-menu"
+      },
+      "item_4": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "middle-menu"
+      },
+      "item_2": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "indication-menu"
+      },
+      "item_3": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "footer-menu"
+      }
+    },
+    "navigationStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "main-nav"
+      }
+    },
+    "rteStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "download-link"
+      },
+      "item_2": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "external-link"
+      }
+    },
+    "searchboxStyleNames": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "top-search-box"
+      }
+    },
+    "typekitFonts": [
+      "Typekit Font 1",
+      "Typekit Font 2",
+      "Typekit Font 3"
+    ],
+    "googleFonts": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "family": "Google Font 1",
+        "name": "Google Font 1",
+        "subset": "Google Font 1"
+      },
+      "item_2": {
+        "jcr:primaryType": "nt:unstructured",
+        "family": "Google Font 2",
+        "name": "Google Font 2",
+        "subset": "Google Font 2"
+      }
+    },
+    "defaultFonts": {
+      "jcr:primaryType": "nt:unstructured",
+      "item_1": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Verdana"
+      },
+      "item_2": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Times"
+      },
+      "item_3": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Arial"
+      },
+      "item_4": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Tahoma"
+      },
+      "item_5": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Serif"
+      },
+      "item_6": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Sans-serif"
+      },
+      "item_7": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "Monospace"
+      },
+      "item_8": {
+        "jcr:primaryType": "nt:unstructured",
+        "name": "cursive"
+      }
+    }
+  }
+}

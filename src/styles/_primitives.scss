@@ -1,0 +1,56 @@
+$control-font-color: #333;
+$control-font-color-hover: #eee;
+$control-font-size: 12px;
+$control-line-height: 12px;
+$control-border-color-disabled: #999;
+$control-bg-color: #ebebeb;
+$control-bg-color-hover: #ccc;
+$control-bg-color-disabled: rgba(255, 255, 255, .1);
+
+%button {
+  box-sizing: border-box;
+  padding: 1px 4px;
+  margin: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: $control-bg-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $control-bg-color-hover;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active {
+    color: #fff;
+    background-color: #69B9FF;
+  }
+
+  .active & {
+    color: #fff;
+    background-color: #3B79C3;
+  }
+}
+
+.sb-label {
+  display: block;
+  margin-bottom: 1px;
+  color: #999;
+  font-size: 11px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+%fieldset {
+  padding: 4px 0 8px;
+  border: dashed #aaa;
+  border-width: 1px 0 1px 0;
+
+  & > .sb-legend {
+    padding-right: 4px;
+    color: #aaa;
+  }
+}

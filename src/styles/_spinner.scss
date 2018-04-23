@@ -1,0 +1,128 @@
+%spinner {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 1px;
+  grid-template-rows: auto 15px 15px;
+  grid-template-columns: 15px 32px 15px;
+  position: relative;
+
+  .sb-label {
+    display: block;
+    grid-area: 1 / span 3;
+  }
+
+  & > .sb-value {
+    @extend %textfield;
+    grid-area: 2 / span 3;
+
+    & > .sb-label {
+      display: none;
+    }
+  }
+
+  & > .sb-unit,
+  & > .sb-mode {
+    @extend %dropdown;
+    text-align: center;
+
+    & > .sb-label {
+      display: none;
+    }
+  }
+
+  & > .sb-unit {
+    grid-area: 3 / 2;
+    justify-self: center;
+    align-self: start;
+    width: 32px;
+  }
+
+  & > .sb-mode {
+    grid-area: 3 / span 3;
+    position: absolute;
+    width: 100%;
+  }
+
+  & > .sb-increment,
+  & > .sb-decrement {
+    @extend %button;
+
+    display: block;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+
+  & > .sb-increment {
+    background-image: icon-url('arrow-up5', #666);
+    grid-area: 3 / 3;
+  }
+
+  & > .sb-decrement {
+    background-image: icon-url('arrow-down5', #666);
+    grid-area: 3 / 1;
+  }
+
+  &.sb-active {
+    & > .sb-label {
+      color: $control-font-color-hover;
+    }
+  }
+}
+
+%spinner-standalone {
+  @extend %spinner;
+
+  & > .sb-value {
+    & > .sb-input {
+      display: block;
+      width: 34px;
+      padding: 0;
+      border: none;
+      border-radius: 3px;
+      color: $control-font-color;
+      font-size: $control-font-size;
+      text-align: center;
+      background-color: $control-bg-color;
+    }
+  }
+
+  & > .sb-mode {
+    @extend %dropdown;
+
+    & > .sb-label {
+      display: none;
+    }
+  }
+
+  & > .sb-controls {
+    & > .sb-unit,
+    & > .sb-mode {
+      @extend %dropdown;
+
+      & > .sb-label {
+        display: none;
+      }
+
+      & > .sb-options {
+        width: 100%;
+
+        & > .sb-option {
+          text-align: center;
+          background-color: $control-bg-color;
+          border-radius: 3px;
+
+          &:hover {
+            background-color: #bbb;
+          }
+        }
+      }
+    }
+  }
+}

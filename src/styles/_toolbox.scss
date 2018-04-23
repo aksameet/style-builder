@@ -1,0 +1,193 @@
+$color_changed: #de9523;
+$color_saving: #cc0000;
+$color_saved: #79b05e;
+
+%toolbox-button {
+  color: #666;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding-left: 22px;
+  box-shadow: rgba(0, 0, 0, .2) 0 1px 2px;
+
+  &:hover {
+    background-color: #f4f4f4;
+  }
+}
+
+%toolbox {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, .2) 4px 4px 4px;
+  z-index: 100000;
+  user-select: none;
+
+  & > .sb-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background-color: #fcfcfc;
+
+    & > .sb-controls {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+  }
+
+  & > .sb-content {
+    display: none;
+    background: #4b4b4b;
+
+    .sb-traversing {
+      margin: 10px;
+    }
+
+    .sb-map {
+      padding: 0 10px;
+      height: 374px;
+      overflow: auto;
+    }
+  }
+
+  &.sb-active {
+    & > .sb-header {
+      & > .sb-controls {
+        & > .sb-visibility {
+          background-image: icon-url('eye-blocked', #666);
+        }
+      }
+    }
+    & > .sb-content {
+      display: block;
+    }
+  }
+}
+
+.sb-editComponent {
+  @extend %toolbox;
+  position: fixed;
+  top: 10vh;
+  right: 1vh;
+  width: 380px;
+  opacity: .7;
+
+  & > .sb-header {
+    background: #fff icon-url('move', #666) no-repeat right 10px center / 14px;
+    cursor: pointer;
+
+    .sb-clear,
+    .sb-rescan,
+    .sb-save,
+    .sb-visibility {
+      @extend %toolbox-button;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .sb-clear {
+      background: #fff icon-url('eraser2', #666) no-repeat left 5px top 2px / 14px;
+    }
+
+    .sb-rescan {
+      background: #fff icon-url('loop2', #666) no-repeat left 5px center / 14px;
+    }
+
+    .sb-save {
+      background: #fff icon-url('file-upload', #666) no-repeat left 6px center / 12px;
+    }
+
+    .sb-visibility {
+      background: #fff icon-url('eye', #666) no-repeat center center / 14px;
+    }
+  }
+
+  &.sb-active {
+    opacity: 1;
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.sb-status {
+  width: 130px;
+  padding: 0 16px 0 0;
+  text-align: right;
+  font-size: 11px;
+  line-height: 1.2;
+  background: transparent icon-url('file-check', #666) no-repeat right center / 12px;
+
+  &.sb-pristine {
+    background-image: icon-url('file-empty', #666);
+  }
+
+  &.sb-saving {
+    color: $color_saving;
+    background-image: icon-url('file-upload', $color_saving);
+  }
+
+  &.sb-changed {
+    color: $color_changed;
+    background-image: icon-url('file-upload', $color_changed);
+  }
+
+  &.sb-saved {
+    color: $color_saved;
+    background-image: icon-url('file-check', $color_saved);
+  }
+
+  &.sb-scanning {
+    color: $color_saving;
+    background-image: icon-url('loop2', $color_saving);
+  }
+
+  &.sb-scanned {
+    color: $color_saved;
+    background-image: icon-url('file-check', $color_saved);
+  }
+}
+
+.sb-infobox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  padding: 4px;
+  border-radius: 0 0 3px 3px;
+  box-shadow: rgba(0, 0, 0, .2) 0 2px 2px;
+  background-color: #fff;
+  user-select: none;
+
+  .sb-selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 32px;
+    background: #fff icon-url('embed', #666) no-repeat left 6px center / 18px;
+
+    & > .sb-bodySwitch {
+      @extend %dropdown-standalone;
+      width: 120px;
+      height: 15px;
+      margin-right: 8px;
+
+      & > .sb-label {
+        display: none;
+      }
+    }
+
+    & > .sb-role {
+      display: block;
+      text-align: left;
+      font-size: 13px;
+      margin-right: 10px;
+    }
+  }
+}

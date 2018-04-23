@@ -1,0 +1,56 @@
+.sb-editMiscellaneous {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px;
+  grid-template-columns: 65px 65px 98px 96px;
+
+  > .sb-display,
+  > .sb-boxSizing,
+  > .sb-overflow,
+  > .sb-float,
+  > .sb-clear,
+  > .sb-cursor {
+    @extend %dropdown-standalone;
+  }
+
+  > .sb-verticalAlign {
+    @extend %spinner-standalone;
+    grid-area: 2/3;
+  }
+
+  > .sb-opacity {
+    @extend %spinner-standalone;
+    grid-area: 2/4;
+  }
+
+  > .sb-display {
+    grid-area: 1/1;
+    width: 140px;
+  }
+
+  > .sb-boxSizing {
+    grid-area: 1/3;
+    width: 98px;
+  }
+
+  > .sb-overflow {
+    grid-area: 1/4;
+    width: 61px;
+  }
+
+  > .sb-float {
+    grid-area: 2/1;
+    width: 65px;
+  }
+
+  > .sb-clear {
+    grid-area: 2/2;
+    width: 65px;
+  }
+
+  > .sb-cursor {
+    grid-area: 3/1;
+    width: 96px;
+  }
+}

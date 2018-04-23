@@ -1,0 +1,40 @@
+.sb-editables {
+  > .sb-tabs {
+    white-space: normal;
+    line-height: 15px;
+
+    > .sb-layout,
+    > .sb-miscellaneous,
+    > .sb-flexbox,
+    > .sb-position,
+    > .sb-font,
+    > .sb-list,
+    > .sb-border,
+    > .sb-background,
+    > .sb-boxshadow,
+    > .sb-textshadow{
+      box-sizing: border-box;
+      display: inline-block;
+      width: 124px;
+      padding: 4px 8px;
+      margin: 1px;
+      text-align: center;
+      background-color: #666;
+      cursor: pointer;
+
+      &:hover {
+        color: #eee;
+      }
+
+      &.sb-active {
+        color: #eee;
+        background-color: #777;
+        pointer-events: none;
+      }
+    }
+  }
+
+  > .sb-contents {
+    padding: 10px;
+  }
+}

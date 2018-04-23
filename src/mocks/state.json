@@ -1,0 +1,46 @@
+{
+  "settings": {
+    "toolbox": {
+      "orientation": "n|e|s|w"
+    },
+    "autosave": {
+      "enabled": true,
+      "interval": 2000
+    }
+  },
+  "website": {
+    "channels": {
+      "x-small": {},
+      "small": {},
+      "medium": {
+        "pages": {
+          "id1": {},
+          "id2": {
+            "title": "Page 1 title",
+            "grid": false,
+            "layout": {
+              "areas": {
+                "id1": {},
+                "id2": {
+                  "components": [
+                    {
+                      "type": "text-media",
+                      "role": "someRole1",
+                      "values": {
+                        "text": "Lorem ipsum dolor sit amet"
+                      }
+                    }
+                  ]
+                },
+                "id3": {}
+              }
+            }
+          },
+          "id3": {}
+        }
+      },
+      "large": {},
+      "x-large": {}
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.sb-editLayout {
+
+  & > .sb-blockDimensions {
+    position: relative;
+    width: 228px;
+    margin: 20px auto 40px;
+
+    & > .sb-margin {
+      @extend %blockDimensions;
+      position: relative;
+      width: 228px;
+      height: 130px;
+
+      & > .sb-top,
+      & > .sb-left {
+        align-items: flex-end;
+      }
+      & > .sb-right,
+      & > .sb-bottom {
+        align-items: flex-start;
+      }
+    }
+
+    & > .sb-padding {
+      @extend %blockDimensions;
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 200px;
+      height: 102px;
+
+      & > .sb-top,
+      & > .sb-left {
+        align-items: flex-start;
+      }
+      & > .sb-right,
+      & > .sb-bottom {
+        align-items: flex-end;
+      }
+    }
+  }
+}

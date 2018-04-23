@@ -1,0 +1,121 @@
+.sb-editBackground {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-template-columns: 46px 64px 64px 64px;
+  grid-gap: 10px;
+  position: relative;
+
+
+  & > .sb-image {
+    @extend %textfield;
+    width: 100%;
+    grid-column: 1 / span 5;
+  }
+
+  & > .sb-colorpicker {
+    @extend %colorpicker;
+    grid-row: 2 / span 2;
+  }
+
+  & > .sb-edge-h,
+  & > .sb-edge-v {
+    @extend %dropdown-standalone;
+  }
+
+  & > .sb-edge-h {
+    grid-area: 2 / 2;
+    width: 64px;
+    height: 27px;
+  }
+
+  & > .sb-edge-v {
+    grid-area: 2 / 3;
+    width: 64px;
+    height: 27px;
+  }
+
+  & > .sb-distance-h,
+  & > .sb-distance-v {
+    @extend %spinner-standalone;
+
+    & > .sb-controls {
+      & > .sb-unit {
+        width: 26px;
+      }
+    }
+
+    & > .sb-label {
+      display: block;
+    }
+  }
+
+  & > .sb-distance-h {
+    grid-area: 3 / 2;
+  }
+
+  & > .sb-distance-v {
+    grid-area: 3 / 3;
+  }
+
+  & > .sb-width,
+  & > .sb-height {
+    @extend %spinner-standalone;
+
+    & > .sb-controls {
+      & > .sb-mode {
+        width: 46px;
+      }
+      & > .sb-unit {
+        width: 26px;
+      }
+    }
+
+    & > .sb-label {
+      display: block;
+    }
+  }
+
+  & > .sb-width {
+    grid-area: 3 / 4;
+  }
+
+  & > .sb-height {
+    grid-area: 3 / 5;
+  }
+
+  & > .sb-repeat {
+    @extend %dropdown-standalone;
+    grid-area: 4 / 1;
+    width: 80px;
+  }
+
+  & > .sb-attachment {
+    @extend %dropdown-standalone;
+    grid-area: 4 / 5;
+    width: 64px;
+  }
+
+  & > .sb-clip {
+    @extend %dropdown-standalone;
+    grid-area: 4 / 3;
+    width: 98px;
+  }
+
+  .sb-mode {
+    grid-area: 2 / 4;
+
+    & > .sb-legend {
+      @extend .sb-label;
+    }
+
+    & > .sb-content {
+      display: flex;
+    }
+
+    .sb-button {
+      @extend %button;
+      margin-right: 2px;
+    }
+  }
+}

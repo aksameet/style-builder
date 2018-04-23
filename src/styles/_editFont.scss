@@ -1,0 +1,59 @@
+.sb-editFont {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px;
+  grid-template-columns: 62px 96px 76px 64px;
+
+  & > .sb-family,
+  & > .sb-align,
+  & > .sb-style,
+  & > .sb-weight,
+  & > .sb-decoration {
+    @extend %dropdown-standalone;
+  }
+
+  & > .sb-size,
+  & > .sb-line,
+  & > .sb-indent {
+    @extend %spinner-standalone;
+  }
+
+  & > .sb-colorpicker {
+    @extend %colorpicker;
+    grid-area: 3/1;
+  }
+
+  & > .sb-size {
+    grid-area: 3/3;
+  }
+
+  & > .sb-line {
+    grid-area: 3/4;
+  }
+
+  & > .sb-family {
+    grid-area: 1 / span 4;
+    width: 100%;
+  }
+
+  & > .sb-style {
+    grid-area: 2/1;
+    width: 62px;
+  }
+
+  & > .sb-weight {
+    grid-area: 2/4;
+    width: 62px;
+  }
+
+  & > .sb-decoration {
+    grid-area: 2/2;
+    width: 96px;
+  }
+
+  & > .sb-align {
+    grid-area: 2/3;
+    width: 76px;
+  }
+}

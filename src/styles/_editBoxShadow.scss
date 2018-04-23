@@ -1,0 +1,35 @@
+.sb-editBoxShadow {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-gap: 10px;
+  grid-template-columns: 46px 64px 64px 64px 64px;
+
+  .sb-colorpicker {
+    @extend %colorpicker;
+    grid-area: 1 / 1;
+  }
+
+  .sb-offset-x,
+  .sb-offset-y,
+  .sb-blur,
+  .sb-spread {
+    @extend %spinner;
+  }
+
+  .sb-offset-x {
+    grid-area: 1 / 2;
+  }
+
+  .sb-offset-y {
+    grid-area: 1 / 3;
+  }
+
+  .sb-blur {
+    grid-area: 1 / 4;
+  }
+
+  .sb-spread {
+    grid-area: 1 / 5;
+  }
+}

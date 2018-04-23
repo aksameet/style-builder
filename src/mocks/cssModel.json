@@ -1,0 +1,16 @@
+{
+  "all": {
+
+  },
+  "phone": {},
+  "tablet": {
+    ".logo-roche .text-media-img": {
+      "cssRuleIndex": 0,
+      "props": {
+        "color": "rgba(228, 14, 14, 1)",
+        "backgroundColor": "rgba(14, 236, 125, 1)"
+      }
+    }
+  },
+  "desktop": {}
+}

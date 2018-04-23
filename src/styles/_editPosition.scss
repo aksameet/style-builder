@@ -1,0 +1,48 @@
+.sb-editPosition {
+  display: grid;
+  justify-items: start;
+  align-items: end;
+  grid-template-columns: 20px 120px 64px 64px 64px;
+  grid-template-rows: 43px 43px 43px;
+
+  & > .sb-position {
+    @extend %dropdown-standalone;
+
+    grid-area: 1/2;
+    width: 72px;
+  }
+
+  & > .sb-z-index {
+    @extend %spinner-standalone;
+    grid-area: 3/2;
+
+    & > .sb-label {
+      display: block;
+    }
+  }
+
+  & > .sb-top,
+  & > .sb-right,
+  & > .sb-bottom,
+  & > .sb-left {
+    @extend %spinner-standalone;
+
+    .sb-label {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  & > .sb-top {
+    grid-area: 1/4;
+  }
+  & > .sb-right {
+    grid-area: 2/5;
+  }
+  & > .sb-bottom {
+    grid-area: 3/4;
+  }
+  & > .sb-left {
+    grid-area: 2/3;
+  }
+}

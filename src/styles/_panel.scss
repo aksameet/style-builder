@@ -1,0 +1,48 @@
+%panel {
+  & > .sb-header {
+    padding: 6px 10px 6px 16px;
+    color: #ddd;
+    border-top: 1px solid #272727;
+    border-bottom: 1px solid #272727;
+    background: #393939 icon-url('arrow-right5', #fff) no-repeat left center;
+    user-select: none;
+  }
+
+  & > .sb-content {
+    animation: fadeIn .6s;
+    opacity: 1;
+  }
+
+  &.sb-active {
+    & > .sb-header {
+      background: #393939 icon-url('arrow-down5', #fff) no-repeat left center;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+.sb-layout,
+.sb-font,
+.sb-border,
+.sb-position,
+.sb-background,
+.sb-shadow {
+  @extend %panel;
+
+  & > .sb-content {
+    padding: 16px;
+  }
+}
+
+.sb-misc,
+.sb-flexbox {
+  @extend %panel;
+
+  & > .sb-content {
+    padding: 4px 10px 10px;
+  }
+}
