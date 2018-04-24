@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 class TreeView extends React.Component {
   constructor(props) {
     super(props);
@@ -70,17 +70,17 @@ class TreeView extends React.Component {
 }
 
 TreeView.propTypes = {
-  source: React.PropTypes.array,
-  parentSelector: React.PropTypes.string,
-  selection: React.PropTypes.string,
-  active: React.PropTypes.bool,
-  children: React.PropTypes.oneOfType([
-    React.PropTypes.element,
-    React.PropTypes.array
+  source: PropTypes.array.isRequired,
+  parentSelector: PropTypes.string.isRequired,
+  selection: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.element.isRequired,
+    PropTypes.array.isRequired
   ]),
-  breadcrumbs: React.PropTypes.array,
-  handleActivate: React.PropTypes.func,
-  onNodeClick: React.PropTypes.func
+  breadcrumbs: PropTypes.array.isRequired,
+  handleActivate: PropTypes.func.isRequired,
+  onNodeClick: PropTypes.func.isRequired
 };
 
 export default TreeView;

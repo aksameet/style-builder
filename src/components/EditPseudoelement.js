@@ -1,6 +1,7 @@
 import React from 'react';
 import Collection from './form/Collection';
 import Textfield from './form/Textfield';
+import PropTypes from 'prop-types';
 
 const EditPseudoelement = ({type, content='', onChangeType, onChangeContent, onClearContent}) => {
   return (
@@ -29,11 +30,11 @@ const EditPseudoelement = ({type, content='', onChangeType, onChangeContent, onC
 };
 
 EditPseudoelement.propTypes = {
-  type: React.PropTypes.string,
-  content: React.PropTypes.string,
-  onChangeType: React.PropTypes.func,
-  onChangeContent: React.PropTypes.func,
-  onClearContent: React.PropTypes.func
+  type: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  onChangeType: PropTypes.func.isRequired,
+  onChangeContent: PropTypes.func.isRequired,
+  onClearContent: PropTypes.func.isRequired
 };
 
 export default EditPseudoelement;

@@ -1,7 +1,7 @@
 import React from 'react';
 import config from '../config.js';
 import Spinner from './form/Spinner';
-
+import PropTypes from 'prop-types';
 class EditBorderRadius extends React.Component {
   constructor(props) {
     super(props);
@@ -71,11 +71,11 @@ class EditBorderRadius extends React.Component {
 }
 
 EditBorderRadius.propTypes = {
-  cssProps: React.PropTypes.object,
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  cssProps: PropTypes.object.isRequired,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditBorderRadius;

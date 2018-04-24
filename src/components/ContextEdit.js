@@ -1,6 +1,6 @@
 import React from 'react';
 import {Manager, Target, Popper} from 'react-popper';
-
+import PropTypes from 'prop-types';
 class ContextEdit extends React.Component {
 
   constructor(props) {
@@ -67,19 +67,19 @@ class ContextEdit extends React.Component {
 }
 
 ContextEdit.propTypes = {
-  header: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  header: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.element.isRequired
   ]),
-  body: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  body: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.element.isRequired
   ]),
-  footer: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.element
+  footer: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.element.isRequired
   ]),
-  onChange: React.PropTypes.func
+  onChange: PropTypes.func.isRequired
 };
 
 export default ContextEdit;

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 class Dropdown extends React.Component {
 
   constructor(props) {
@@ -93,14 +93,14 @@ class Dropdown extends React.Component {
 }
 
 Dropdown.propTypes = {
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  selected: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.number
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  selected: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
   ]),
-  children: React.PropTypes.array,
-  onChange: React.PropTypes.func
+  children: PropTypes.array.isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Dropdown;

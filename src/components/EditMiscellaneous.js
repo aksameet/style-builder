@@ -2,6 +2,7 @@ import React from 'react';
 import Dropdown from './form/Dropdown';
 import Spinner from './form/Spinner';
 import config from "../config";
+import PropTypes from 'prop-types';
 
 const EditMiscellaneous = ({cssProps, onChange, onClear}) => {
   return (
@@ -136,9 +137,9 @@ const EditMiscellaneous = ({cssProps, onChange, onClear}) => {
 };
 
 EditMiscellaneous.propTypes = {
-  cssProps: React.PropTypes.object,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  cssProps: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditMiscellaneous;

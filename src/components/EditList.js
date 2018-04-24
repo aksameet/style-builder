@@ -1,6 +1,7 @@
 import React from 'react';
 import Textfield from './form/Textfield';
 import Dropdown from './form/Dropdown';
+import PropTypes from 'prop-types';
 
 const EditList = ({type, image='', position, onChange, onClear}) => {
   return (
@@ -46,11 +47,11 @@ const EditList = ({type, image='', position, onChange, onClear}) => {
 };
 
 EditList.propTypes = {
-  type: React.PropTypes.string,
-  image: React.PropTypes.string,
-  position: React.PropTypes.string,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  type: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  position: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditList;

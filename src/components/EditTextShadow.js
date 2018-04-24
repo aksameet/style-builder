@@ -3,7 +3,7 @@ import config from '../config.js';
 import {getColor} from '../utils/valueExtractors';
 import Spinner from './form/Spinner';
 import Colorpicker from './Colorpicker';
-
+import PropTypes from 'prop-types';
 class EditBoxShadow extends React.Component {
 
   constructor(props) {
@@ -76,9 +76,9 @@ class EditBoxShadow extends React.Component {
 }
 
 EditBoxShadow.propTypes = {
-  value: React.PropTypes.string,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditBoxShadow;

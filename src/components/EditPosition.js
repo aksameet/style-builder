@@ -2,6 +2,7 @@ import React from 'react';
 import config from '../config.js';
 import Dropdown from './form/Dropdown';
 import Spinner from './form/Spinner';
+import PropTypes from 'prop-types';
 
 const EditPosition = ({type, distance, zIndex, onChangeType, onChangeDistance,
                         onClearDistance, onChangeZIndex, onClearZIndex}) => {
@@ -68,14 +69,14 @@ const EditPosition = ({type, distance, zIndex, onChangeType, onChangeDistance,
 };
 
 EditPosition.propTypes = {
-  type: React.PropTypes.string,
-  distance: React.PropTypes.object,
-  zIndex: React.PropTypes.string,
-  onChangeType: React.PropTypes.func,
-  onChangeDistance: React.PropTypes.func,
-  onClearDistance: React.PropTypes.func,
-  onChangeZIndex: React.PropTypes.func,
-  onClearZIndex: React.PropTypes.func
+  type: PropTypes.string.isRequired,
+  distance: PropTypes.object.isRequired,
+  zIndex: PropTypes.string.isRequired,
+  onChangeType: PropTypes.func.isRequired,
+  onChangeDistance: PropTypes.func.isRequired,
+  onClearDistance: PropTypes.func.isRequired,
+  onChangeZIndex: PropTypes.func.isRequired,
+  onClearZIndex: PropTypes.func.isRequired
 };
 
 export default EditPosition;

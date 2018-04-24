@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 class TabbedPanels extends React.Component {
   constructor(props) {
     super(props);
@@ -38,10 +38,10 @@ class TabbedPanels extends React.Component {
 }
 
 TabbedPanels.propTypes = {
-  activeIndex: React.PropTypes.number,
-  name: React.PropTypes.string,
-  tabs: React.PropTypes.array,
-  children: React.PropTypes.array
+  activeIndex: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  tabs: PropTypes.array.isRequired,
+  children: PropTypes.array.isRequired
 };
 
 export default TabbedPanels;

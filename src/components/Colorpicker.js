@@ -1,7 +1,7 @@
 import React from 'react';
 import {SketchPicker} from 'react-color';
 import {Manager, Target, Popper} from 'react-popper';
-
+import PropTypes from 'prop-types';
 class Colorpicker extends React.Component {
   constructor(props) {
     super(props);
@@ -89,11 +89,11 @@ class Colorpicker extends React.Component {
 }
 
 Colorpicker.propTypes = {
-  color: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.object
+  color: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.object.isRequired
   ]),
-  onSelectColor: React.PropTypes.func
+  onSelectColor: PropTypes.func.isRequired
 };
 
 export default Colorpicker;

@@ -3,7 +3,7 @@ import {getFloat} from '../../utils/valueExtractors';
 import ContextEdit from '../ContextEdit';
 import Textfield from './Textfield';
 import Dropdown from './Dropdown';
-
+import PropTypes from 'prop-types';
 class Spinner extends React.Component {
   constructor(props) {
     super(props);
@@ -191,18 +191,18 @@ class Spinner extends React.Component {
 }
 
 Spinner.propTypes = {
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.number
+  value: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired
   ]),
-  step: React.PropTypes.number,
-  availableModes: React.PropTypes.array,
-  availableUnits: React.PropTypes.array,
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  disabled: React.PropTypes.bool,
-  handleChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  step: PropTypes.number.isRequired,
+  availableModes: PropTypes.array.isRequired,
+  availableUnits: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default Spinner;

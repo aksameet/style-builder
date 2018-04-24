@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Textfield = ({name, label, value, disabled, onChange, onMouseEnter, onMouseLeave, onBlur, onClear}) => {
 
@@ -26,18 +27,18 @@ const Textfield = ({name, label, value, disabled, onChange, onMouseEnter, onMous
 };
 
 Textfield.propTypes = {
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.number
+  value: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.number.isRequired,
   ]),
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  disabled: React.PropTypes.bool,
-  onChange: React.PropTypes.func,
-  onMouseEnter: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func,
-  onBlur: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onMouseEnter: PropTypes.func.isRequired,
+  onMouseLeave: PropTypes.func.isRequired,
+  onBlur: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default Textfield;

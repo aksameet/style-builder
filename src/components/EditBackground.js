@@ -5,7 +5,7 @@ import Dropdown from './form/Dropdown';
 import Spinner from './form/Spinner';
 import Colorpicker from './Colorpicker';
 import Collection from './form/Collection';
-
+import PropTypes from 'prop-types';
 class EditBackground extends React.Component {
   constructor(props) {
     super(props);
@@ -236,9 +236,9 @@ class EditBackground extends React.Component {
 }
 
 EditBackground.propTypes = {
-  cssProps: React.PropTypes.object,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  cssProps: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditBackground;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Fieldset = ({ name, legend, className, children }) => {
   return (
@@ -12,10 +13,10 @@ const Fieldset = ({ name, legend, className, children }) => {
 };
 
 Fieldset.propTypes = {
-  name: React.PropTypes.string,
-  className: React.PropTypes.string,
-  legend: React.PropTypes.string,
-  children: React.PropTypes.array
+  name: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  legend: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired
 };
 
 export default Fieldset;

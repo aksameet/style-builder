@@ -122,8 +122,13 @@ export const getCssModel = (localStorageCssModel) =>
         dispatch({type: APP_CSS_MODEL_FETCHED, cssModel});
       });
     } else {
-      fetch('./mocks/cssModel.json')
-        .then((response) => response.json())
+      fetch(`./mocks/cssModel.json`, {
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+         }
+      })
+        .then((response) => response)
         .then((model) => {
           cssModel = {
             all: {
@@ -159,7 +164,12 @@ export const fetchRoleNames = () =>
       });
     } else {
       setTimeout(() =>
-        fetch('./mocks/roles.json')
+        fetch(`./mocks/roles.json`, {
+          headers: { 
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          }
+        })
           .then((response) => response.json())
           .then((json) => {
             processCloudServiceConfig(json, dispatch);

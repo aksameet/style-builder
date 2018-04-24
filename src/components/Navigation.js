@@ -1,6 +1,6 @@
 import React from 'react';
 import TreeView from './TreeView';
-
+import PropTypes from 'prop-types';
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
@@ -95,10 +95,10 @@ class Navigation extends React.Component {
 }
 
 Navigation.propTypes = {
-  roles: React.PropTypes.object,
-  descriptor: React.PropTypes.object,
-  selection: React.PropTypes.object,
-  onNavigate: React.PropTypes.func
+  roles: PropTypes.object.isRequired,
+  descriptor: PropTypes.object.isRequired,
+  selection: PropTypes.object.isRequired,
+  onNavigate: PropTypes.func.isRequired
 };
 
 export default Navigation;

@@ -22,6 +22,7 @@ import Transport from './Transport';
 import Navigation from './Navigation';
 import * as AppActions from '../actions/app.actions';
 
+import PropTypes from 'prop-types';
 class App extends React.Component {
 
   constructor(props) {
@@ -412,29 +413,29 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  transport: React.PropTypes.string,
-  status: React.PropTypes.object,
-  cssRules: React.PropTypes.object,
-  descriptor: React.PropTypes.object,
-  roles: React.PropTypes.object,
-  defaultFonts: React.PropTypes.array,
-  googleFonts: React.PropTypes.array,
-  typekitFonts: React.PropTypes.array,
-  bodySwitches: React.PropTypes.array,
-  selectionStyling: React.PropTypes.object,
-  deviceChange: React.PropTypes.func,
-  onSelectElement: React.PropTypes.func,
-  onEditStyle: React.PropTypes.func,
-  updateDescriptor: React.PropTypes.func,
-  getCssModel: React.PropTypes.func,
-  setCssRules: React.PropTypes.func,
-  resetCssRules: React.PropTypes.func,
-  fetchRoleNames: React.PropTypes.func,
-  onSave: React.PropTypes.func,
-  handleModelTransport: React.PropTypes.func,
-  handleModelImport: React.PropTypes.func,
-  handleModelExport: React.PropTypes.func,
-  handleRemoveStyle: React.PropTypes.func
+  transport: PropTypes.string.isRequired,
+  status: PropTypes.object.isRequired,
+  cssRules: PropTypes.object.isRequired,
+  descriptor: PropTypes.object.isRequired,
+  roles: PropTypes.object.isRequired,
+  defaultFonts: PropTypes.array.isRequired,
+  googleFonts: PropTypes.array.isRequired,
+  typekitFonts: PropTypes.array.isRequired,
+  bodySwitches: PropTypes.array.isRequired,
+  selectionStyling: PropTypes.object.isRequired,
+  deviceChange: PropTypes.func.isRequired,
+  onSelectElement: PropTypes.func.isRequired,
+  onEditStyle: PropTypes.func.isRequired,
+  updateDescriptor: PropTypes.func.isRequired,
+  getCssModel: PropTypes.func.isRequired,
+  setCssRules: PropTypes.func.isRequired,
+  resetCssRules: PropTypes.func.isRequired,
+  fetchRoleNames: PropTypes.func.isRequired,
+  onSave: PropTypes.func.isRequired,
+  handleModelTransport: PropTypes.func.isRequired,
+  handleModelImport: PropTypes.func.isRequired,
+  handleModelExport: PropTypes.func.isRequired,
+  handleRemoveStyle: PropTypes.func.isRequired
 };
 
 const mapStateToProps = ({app}) => app;

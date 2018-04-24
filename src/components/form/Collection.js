@@ -1,5 +1,6 @@
 import React from 'react';
 import Fieldset from './Fieldset';
+import PropTypes from 'prop-types';
 
 class Collection extends React.Component {
   constructor(props) {
@@ -39,13 +40,13 @@ class Collection extends React.Component {
 }
 
 Collection.propTypes = {
-  value: React.PropTypes.string,
-  className: React.PropTypes.string,
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  legend: React.PropTypes.string,
-  children: React.PropTypes.array,
-  onItemClick: React.PropTypes.func
+  value: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  legend: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
+  onItemClick: PropTypes.func.isRequired
 };
 
 export default Collection;

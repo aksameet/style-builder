@@ -1,6 +1,7 @@
 import React from 'react';
 import config from '../config.js';
 import Spinner from './form/Spinner';
+import PropTypes from 'prop-types';
 
 const EditDimensions = ({width, minWidth, maxWidth, height, minHeight, maxHeight,
 onChangeWidth, onChangeMinWidth, onChangeMaxWidth, onChangeHeight, onChangeMinHeight, onChangeMaxHeight, onClear}) => {
@@ -65,19 +66,19 @@ onChangeWidth, onChangeMinWidth, onChangeMaxWidth, onChangeHeight, onChangeMinHe
 };
 
 EditDimensions.propTypes = {
-  width: React.PropTypes.string,
-  minWidth: React.PropTypes.string,
-  maxWidth: React.PropTypes.string,
-  height: React.PropTypes.string,
-  minHeight: React.PropTypes.string,
-  maxHeight: React.PropTypes.string,
-  onChangeWidth: React.PropTypes.func,
-  onChangeMinWidth: React.PropTypes.func,
-  onChangeMaxWidth: React.PropTypes.func,
-  onChangeHeight: React.PropTypes.func,
-  onChangeMinHeight: React.PropTypes.func,
-  onChangeMaxHeight: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  width: PropTypes.string.isRequired,
+  minWidth: PropTypes.string.isRequired,
+  maxWidth: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  minHeight: PropTypes.string.isRequired,
+  maxHeight: PropTypes.string.isRequired,
+  onChangeWidth: PropTypes.func.isRequired,
+  onChangeMinWidth: PropTypes.func.isRequired,
+  onChangeMaxWidth: PropTypes.func.isRequired,
+  onChangeHeight: PropTypes.func.isRequired,
+  onChangeMinHeight: PropTypes.func.isRequired,
+  onChangeMaxHeight: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditDimensions;

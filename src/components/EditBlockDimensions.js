@@ -1,7 +1,7 @@
 import React from 'react';
 import config from '../config.js';
 import Spinner from './form/Spinner';
-
+import PropTypes from 'prop-types';
 class EditBlockDimensions extends React.Component {
   constructor(props) {
     super(props);
@@ -66,13 +66,13 @@ class EditBlockDimensions extends React.Component {
 }
 
 EditBlockDimensions.propTypes = {
-  name: React.PropTypes.string,
-  top: React.PropTypes.object,
-  right: React.PropTypes.object,
-  bottom: React.PropTypes.object,
-  left: React.PropTypes.object,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  name: PropTypes.string.isRequired,
+  top: PropTypes.object.isRequired,
+  right: PropTypes.object.isRequired,
+  bottom: PropTypes.object.isRequired,
+  left: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditBlockDimensions;

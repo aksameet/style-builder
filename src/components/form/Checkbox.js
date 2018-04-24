@@ -31,15 +31,15 @@ class Checkbox extends React.Component {
 }
 
 Checkbox.propTypes = {
-  value: React.PropTypes.oneOfType([
-    React.PropTypes.bool,
-    React.PropTypes.number,
+  value: PropTypes.oneOfType([
+    PropTypes.bool.isRequired,
+    PropTypes.number.isRequired,
     React.PropTypes.string
   ]),
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  checked: React.PropTypes.bool,
-  onChange: React.PropTypes.func
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired
 };
 
 export default Checkbox;

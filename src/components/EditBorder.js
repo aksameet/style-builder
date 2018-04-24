@@ -5,7 +5,7 @@ import Spinner from './form/Spinner';
 import Dropdown from './form/Dropdown';
 import Colorpicker from './Colorpicker';
 import EditBorderRadius from './EditBorderRadius';
-
+import PropTypes from 'prop-types';
 class EditBorder extends React.Component {
 
   constructor(props) {
@@ -181,9 +181,9 @@ class EditBorder extends React.Component {
 }
 
 EditBorder.propTypes = {
-  cssProps: React.PropTypes.object,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  cssProps: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditBorder;

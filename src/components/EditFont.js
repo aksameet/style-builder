@@ -3,6 +3,7 @@ import config from '../config.js';
 import Dropdown from './form/Dropdown';
 import Spinner from './form/Spinner';
 import Colorpicker from './Colorpicker';
+import PropTypes from 'prop-types';
 
 const EditFont = ({availableFonts, cssProps, onChange, onClear}) => {
 
@@ -103,10 +104,10 @@ const EditFont = ({availableFonts, cssProps, onChange, onClear}) => {
 };
 
 EditFont.propTypes = {
-  availableFonts: React.PropTypes.array,
-  cssProps: React.PropTypes.object,
-  onChange: React.PropTypes.func,
-  onClear: React.PropTypes.func
+  availableFonts: PropTypes.array.isRequired,
+  cssProps: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onClear: PropTypes.func.isRequired
 };
 
 export default EditFont;

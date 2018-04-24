@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Transport = ({transport, handleModelTransport, handleModelExport, handleModelImport}) => {
   return (
@@ -29,10 +30,10 @@ const Transport = ({transport, handleModelTransport, handleModelExport, handleMo
 };
 
 Transport.propTypes = {
-  transport: React.PropTypes.string,
-  handleModelTransport: React.PropTypes.func,
-  handleModelExport: React.PropTypes.func,
-  handleModelImport: React.PropTypes.func
+  transport: PropTypes.string.isRequired,
+  handleModelTransport: PropTypes.func.isRequired,
+  handleModelExport: PropTypes.func.isRequired,
+  handleModelImport: PropTypes.func.isRequired
 };
 
 export default Transport;
